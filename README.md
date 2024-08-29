@@ -143,7 +143,7 @@ func deleteItem(c *gin.Context) {
     <title>CRUD Test Page</title>
     <script>
         async function testCRUD(method, id = '') {
-            const url = `http://localhost:5000/item${id ? `/${id}` : ''}`;
+            const url = `http://<ec2-ip>:5000/item${id ? `/${id}` : ''}`;
             const response = await fetch(url, { method });
             const result = await response.json();
             document.getElementById('result').textContent = JSON.stringify(result, null, 2);
@@ -232,7 +232,7 @@ http://<ec2-ip>:5000/test
 
 ### 1. Access Grafana
 
-Open your browser and go to `http://localhost:3000`.
+Open your browser and go to `http://<ec2-ip>:3000`.
 
 ### 2. Add Loki Data Source
 
